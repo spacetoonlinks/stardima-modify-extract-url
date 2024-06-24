@@ -3,123 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>stardima-modify- extract url/title>
-    <style type="text/css">
-         <style type="text/css">
-                 /* General styles */
-* {
-  box-sizing: border-box;
+    <title>Extract URL Parameter</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: ruby-text;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-body {
-  font-family: system-ui;
-  margin: 0;
-  padding: 0;
-  background-color: #f7f7f7;
-  padding-top: 50px;
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-h2 {
-  margin-top: 0;
+h1 {
+    color: #333;
 }
 
-label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 20px;
-  font-size: 16px;
+input[type="text"], textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
 }
 
 button {
-  background-color: #3368ff;
-  color: white;
-  padding: 14px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-bottom: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
-.popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  background-color: rgba(0, 0, 0, 0.8);
-  width: 100%;
-  height: 100%;
-  display: none;
-  padding-top: 80px;
+button:hover {
+    background-color: #0056b3;
 }
 
-.popup-content {
-  background-color: white;
-  margin: auto;
-  padding: 20px;
-  border-radius: 5px;
-  max-width: 500px;
-  max-height: 80%;
-  overflow-y: auto;
-  text-align: center;
-  position: relative;
-}
-
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-@media only screen and (min-width: 768px) { /* Apply styles for screens larger than 768px */
-  input[type="text"] {
-    width: 70%;
-    margin-right: 15px;
-    margin-bottom: 0;
-  }
-
-  label {
-    display: inline-block;
-    margin-right: 15px;
-    margin-bottom: 0;
-  }
-
-  button {
-    margin-bottom: 0;
-  }
-} 
-
-/* Style the top arrow button */
-.top-arrow button {
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  color: #fff; /* white */
-  background-color: #f7f7f7; /*white*/
-  border: none;
-  border-radius: 50%;
-  padding: 12px;
-  font-size: 24px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-}
-
-.top-arrow button:hover {
-  background-color: #0069d9; /* darker blue */
-}
-    </style>
     </style>
     <script>
         function extractParameter() {
@@ -143,14 +72,14 @@ button {
     </script>
 </head>
 <body>
-    <center>
-        <h1>Extract URL Parameter</h1>
-    <input type="text" id="urlInput" placeholder="/embed/?LzFzVVJxZzIwU2lwS28xTjFlSGZsdkc2WTFtSSs1dk5QMG5nRytaNlg2YU9PWnhGdDdKdnM1NGw1aWJTc2ZwelBLeDlpREtjd1lLMnVGT2RHSzUvTHYzcGpyOTFHOHAvUzlUOWtWcGdMYzQ9" size="100"><br><br>
+    <h1>Extract URL Parameter</h1><br>
+    
+    <input type="text" id="urlInput" placeholder="Enter URL here" size="100"><br>
+    <br>
     <button onclick="extractParameter()">Extract</button>
     <br><br>
-    <textarea id="result" rows="1" cols="110" readonly></textarea>
+    <textarea id="result" rows="4" cols="100" readonly></textarea>
     <br>
     <button onclick="copyToClipboard()">Copy</button>
-    </center>
 </body>
 </html>
